@@ -4,8 +4,8 @@ Welcome to my **online resume hosted on GitHub Pages**.
 
 This page presents an overview of my work as a **Data Scientist and Biomedical Engineer**, focused on **turning complex data into meaningful, human‑centric digital solutions**.
 
-🔗 **Live CV:** [andre‑santos‑cv](https://<your-username>.github.io/andre-santos-cv/)  
-*(replace `<your-username>` with your actual GitHub username)*
+🔗 **Live CV:** [andre‑santos‑cv](https://afs091.github.io/cv/)  
+
 
 ---
 
@@ -40,7 +40,7 @@ If you’d like to host your own simple HTML CV via GitHub Pages:
    - Choose **Folder: /(root)**  
    - Click **Save**.
 3. Wait 1‑2 minutes for GitHub Pages to deploy.  
-4. Visit `https://<your‑username>.github.io/andre-santos-cv/`.
+4. Visit `https://afs091.github.io/cv/`.
 
 ---
 
