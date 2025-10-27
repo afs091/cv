@@ -21,7 +21,6 @@
     color:var(--text-color);
     line-height:1.6;
     font-size:16px;
-    padding:0;
   }
   header{
     background:var(--section-bg);
@@ -43,6 +42,9 @@
     border-radius:8px;
     padding:1.25rem 1.5rem;
     margin-bottom:1.2rem;
+    overflow:hidden;          /* keep content inside rounded corners */
+    word-wrap:break-word;     /* wrap long words */
+    overflow-wrap:break-word; /* newer equivalent */
   }
   h2{
     color:var(--primary-color);
@@ -51,22 +53,38 @@
     margin-bottom:.8rem;
     font-size:1.25rem;
   }
+  p, ul, td, th {
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+  }
   ul{padding-left:1.2rem;margin-top:.4rem;}
   ul li{margin-bottom:.4rem;}
-  table{width:100%;border-collapse:collapse;margin-top:.3rem;}
-  th,td{vertical-align:top;text-align:left;padding:.3rem .6rem;}
-  th{width:30%;color:var(--primary-color);}
-  .tagline{
-    background:var(--primary-color);
-    color:#fff;
-    padding:.4rem .7rem;
-    display:inline-block;
-    border-radius:5px;
-    font-size:.8rem;
-    margin-bottom:1rem;
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:.3rem;
+    table-layout:fixed; /* ensures wrapping inside cells */
+  }
+  th,td{
+    vertical-align:top;
+    text-align:left;
+    padding:.3rem .6rem;
+    border:none;
+    word-break:break-word; /* key to prevent overflow */
+  }
+  th{
+    width:30%;
+    color:var(--primary-color);
+  }
+  /* Make sure “·” separators wrap nicely */
+  td{
+    white-space:normal;
   }
   .muted{color:var(--muted-color);}
-  @media (max-width:700px){.container{padding:1rem;}table th{width:40%;}}
+  @media (max-width:700px){
+    .container{padding:1rem;}
+    table th{width:40%;}
+  }
 </style>
 </head>
 <body>
