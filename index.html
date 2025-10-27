@@ -59,6 +59,24 @@
   }
   ul{padding-left:1.2rem;margin-top:.4rem;}
   ul li{margin-bottom:.4rem;}
+
+/* Chips (skill tags) */
+  .chip-container {
+    display:flex;
+    flex-wrap:wrap;
+    gap:.5rem;
+    margin-top:.25rem;
+  }
+  .chip {
+    background:var(--chip-bg);
+    color:var(--accent-color);
+    padding:.3rem .6rem;
+    border-radius:20px;
+    font-size:.9rem;
+    border:1px solid var(--border-color);
+    white-space:nowrap;
+  }
+
   table{
     width:100%;
     border-collapse:collapse;
@@ -128,15 +146,43 @@
   <table>
     <tr>
       <th>Data Science & Analytics</th>
-      <td>Python · R · scikit‑learn · Pandas · NumPy · SciPy · Altair · EDA · Feature Engineering · Graph ML (Neo4j GDS) · Machine Learning Pipelines · Statistics · Visualization</td>
+      <td>
+        <div class="chip-container">
+          <span class="chip">Python</span><span class="chip">R</span>
+          <span class="chip">scikit‑learn</span><span class="chip">Pandas</span>
+          <span class="chip">NumPy</span><span class="chip">SciPy</span>
+          <span class="chip">Altair</span><span class="chip">EDA</span>
+          <span class="chip">Feature Engineering</span><span class="chip">Graph ML (Neo4j GDS)</span>
+          <span class="chip">Machine Learning Pipelines</span><span class="chip">Statistics</span>
+          <span class="chip">Visualization</span>
+        </div>
+      </td>
     </tr>
+
     <tr>
       <th>Software & Development</th>
-      <td>JavaScript · Node.js · Ruby (Rails) · Elixir (Phoenix) · ASP.NET MVC · REST APIs · Git · CI/CD · React.js (basic)</td>
+      <td>
+        <div class="chip-container">
+          <span class="chip">JavaScript</span><span class="chip">Node.js</span>
+          <span class="chip">Ruby (Rails)</span><span class="chip">Elixir (Phoenix)</span>
+          <span class="chip">ASP.NET MVC</span><span class="chip">REST APIs</span>
+          <span class="chip">Git</span><span class="chip">CI/CD</span>
+          <span class="chip">React.js (basic)</span>
+        </div>
+      </td>
     </tr>
+
     <tr>
       <th>Infrastructure & Ops</th>
-      <td>PostgreSQL · MySQL · Neo4j · NoSQL (MongoDB) · Linux · Docker · ETL Pipelines · Data Modeling · Ansible (basic) · Figma/UX thinking</td>
+      <td>
+        <div class="chip-container">
+          <span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
+          <span class="chip">Neo4j</span><span class="chip">MongoDB</span>
+          <span class="chip">Linux</span><span class="chip">Docker</span>
+          <span class="chip">ETL Pipelines</span><span class="chip">Data Modeling</span>
+          <span class="chip">Ansible (basic)</span><span class="chip">Figma/UX Thinking</span>
+        </div>
+      </td>
     </tr>
   </table>
 </section>
