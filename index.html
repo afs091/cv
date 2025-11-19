@@ -124,7 +124,7 @@
 <section>
   <h2>Professional Summary</h2>
   <p>
-    Data Scientist and Biomedical Engineer with 10 years of experience transforming complex biomedical data into intuitive, real‑world solutions. Combines deep technical mastery (<b>Python, R, Neo4j, SQL</b>) with a human‑centric approach to design and usability. 
+    Data Scientist and Biomedical Engineer with 10 years of experience transforming complex biomedical data into intuitive, real‑world solutions. Combines deep technical mastery (<b>Python, R, Neo4j, SQL, ASP.NET</b>) with a human‑centric approach to design and usability. 
   </p>
   <p>
     Currently completing a PhD in Biomedical Engineering (University of Coimbra) on graph analytics & ML in autism genetics. Passionate about collaboration, knowledge‑sharing, and innovation that simplifies people’s lives.
@@ -151,11 +151,12 @@
         <div class="chip-container">
           <span class="chip">Python</span><span class="chip">R</span>
           <span class="chip">scikit‑learn</span><span class="chip">Pandas</span>
-          <span class="chip">NumPy</span><span class="chip">SciPy</span>
-          <span class="chip">Altair</span><span class="chip">EDA</span>
+          <span class="chip">NumPy</span><span class="chip">SciPy</span><span class="chip">networkX</span>
+          <span class="chip">Altair</span><span class="chip">ggplot2</span><span class="chip">EDA</span>
           <span class="chip">Feature Engineering</span><span class="chip">Graph ML (Neo4j GDS)</span>
           <span class="chip">Machine Learning Pipelines</span><span class="chip">Statistics</span>
-          <span class="chip">Visualization</span>
+          <span class="chip">Visualization</span><span class="chip">Tableu</span><span class="chip">Gephi</span>
+          
         </div>
       </td>
     </tr>
@@ -166,9 +167,8 @@
         <div class="chip-container">
           <span class="chip">JavaScript</span><span class="chip">Node.js</span>
           <span class="chip">Ruby (Rails)</span><span class="chip">Elixir (Phoenix)</span>
-          <span class="chip">ASP.NET MVC</span><span class="chip">REST APIs</span>
+          <span class="chip">C#</span><span class="chip">ASP.NET MVC</span><span class="chip">REST APIs</span>
           <span class="chip">Git</span><span class="chip">CI/CD</span>
-          <span class="chip">React.js (basic)</span>
         </div>
       </td>
     </tr>
@@ -178,10 +178,9 @@
       <td>
         <div class="chip-container">
           <span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
-          <span class="chip">Neo4j</span><span class="chip">MongoDB</span>
-          <span class="chip">Linux</span><span class="chip">Docker</span>
+          <span class="chip">Neo4j</span>
+          <span class="chip">Linux</span><span class="chip">Shell Script</span>
           <span class="chip">ETL Pipelines</span><span class="chip">Data Modeling</span>
-          <span class="chip">Ansible (basic)</span><span class="chip">Figma/UX Thinking</span>
         </div>
       </td>
     </tr>
@@ -191,6 +190,18 @@
 <section>
   <h2>Professional Experience</h2>
 
+   <b>PhD Researcher — University of Coimbra · CIBIT & ICNAS</b><br>
+  <span class="muted">2019 – Present | Biomedical Engineering · Neurogenomics · Graph Data Science</span>
+  <ul>
+    <li>Applied <b>graph analytics</b> and <b>machine learning</b> to uncover dopaminergic and serotonergic mechanisms differentiating <b>Autism Spectrum Disorder (ASD)</b> and <b>Developmental Delay (DD)</b>.</li>
+    <li>Designed and maintained <b>relational (MySQL)</b> and <b>graph (Neo4j)</b> databases integrating genomic CNV data, clinical phenotypes, and ontology terms (GO).</li>
+    <li>Developed ETL pipelines (Python · R · Ruby) for data normalization, annotation (Ensembl Biomart), and integration of >68 000 patient‑CNV relations.</li>
+    <li>Performed <b>complex network analysis</b> (hub detection, modularity, centrality metrics) and trained <b>Random Forest classifiers</b> achieving >85% accuracy in differential diagnosis tasks.</li>
+    <li>Implemented <b>graph‑native ML pipelines</b> (node2vec embeddings, Neo4j GDS) to classify participants via genetic and functional similarity networks.</li>
+    <li>Published peer‑reviewed work in the <a href="https://doi.org/10.3390/jpm12101579"></a><i>Journal of Personalized Medicine (2022) journal</i></a>.</li>
+    <li>Released datasets and code as open science resources → <a href="https://doi.org/10.7910/DVN/HO1JLJ">Dataverse Repository</a>.</li>
+  </ul>
+
   <b>Health Informatics Specialist — Centro Hospitalar Universitário de Coimbra (CHUC)</b><br>
   <span class="muted">Clinical Informatics Department · 2017 – 2024</span>
   <ul>
@@ -198,6 +209,7 @@
     <li>Developed interactive UIs and front‑end validation in JavaScript/ASP.NET MVC.</li>
     <li>Built HL7 v2 integration modules linking local data to SClínico (HL7 + LIGHt API).</li>
     <li>Analyzed requirements with multidisciplinary teams and validated clinical workflows.</li>
+    <li>Published peer‑reviewed work in the<a href="https://doi.org/10.3390/healthcare11070973"></a><i>Healthcare (2023)</i></a> journal.</li>
   </ul>
 
   <b>Research Fellow — CIMAGO (Biomedical Research Unit, Univ. of Coimbra)</b><br>
@@ -205,15 +217,24 @@
   <ul>
     <li>Built bioinformatics pipelines integrating copy number variation and expression data for oral cancer research.</li>
     <li>Trained ML models (Random Forest, Clustering) on multi‑omics datasets for biomarker discovery.</li>
-    <li>Applied graph data science for feature detection and visual analysis of gene networks.</li>
+    <li>Applied data science for feature detection and visual analysis of gene networks.</li>
   </ul>
 
-  <b>Researcher / Developer — HNotes (Semantic Health Data Capture Platform)</b><br>
-  <span class="muted">Independent Exploration · 2023 – Present</span>
-  <ul>
-    <li>Prototyping semantic, AI‑assisted data capture framework leveraging HL7 FHIR and SNOMED CT.</li>
-    <li>Building graph‑based data warehouse in Neo4j for contextual retrieval and LLM integration.</li>
-  </ul>
+ <b>Researcher / Developer — HNotes (Semantic Health Data Capture Platform)</b><br>
+<span class="muted">Independent Exploration · 2023 – Present | Semantic Modeling & Web Engineering</span>
+<ul>
+  <li>Designed and developed <b>HNotes</b>—a <b>web‑based proof of concept</b> for structured and semantically interoperable clinical documentation.</li>
+  <li>Implemented in <b>Elixir / Phoenix LiveView</b> with <b>Ecto</b> for data persistence, modeling health records through <b>SNOMED CT</b> terminology.</li>
+  <li>Defined a <b>six‑field semantic schema</b> (Component, Property, Time, System, Scale, Method) ensuring unambiguous encoding of every clinical observation.</li>
+  <li>Created dynamic <b>real‑time interfaces</b> for data entry and hierarchical organization (<i>notebooks → notes → registries</i>).</li>
+  <li>Demonstrated interoperability using <b>cardiovascular data</b> (blood‑pressure records) with SNOMED‑compliant attributes.</li>
+  <li>Showcased integration of <b>semantic interoperability</b>, <b>functional programming</b>, and <b>interactive web technologies</b> for health‑data capture.</li>
+  <li>Explore the live demo: 
+    <a href="https://youtu.be/D4lbiLlnmoc" target="_blank" rel="noopener noreferrer">
+      <b>HNotes prototype ▶️</b>
+    </a>
+  </li>
+</ul>
 </section>
 
 <section>
@@ -255,7 +276,7 @@
 </section>
 
 <footer style="text-align:center;font-size:0.8rem;color:var(--muted-color);margin:1rem 0;">
-  © 2025 André Ferreira Santos · Last updated October 2025
+  © 2025 André Ferreira Santos · Last updated November 2025
 </footer>
 
 </div>
