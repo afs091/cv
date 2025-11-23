@@ -84,10 +84,17 @@
     font-size:1.25rem;
   }
 
-  p, ul, td, th {
-    word-wrap:break-word;
-    overflow-wrap:break-word;
-  }
+p, ul, li {
+  word-break: normal;         /* don't split words mid-way */
+  overflow-wrap: normal;      /* let browser wrap naturally between words */
+  hyphens: auto;              /* optional: adds proper dictionary-based hyphenation */
+  text-align: justify;        /* align text like in MS Word */
+  text-justify: inter-word;   /* better spacing algorithm */
+}
+
+table td, table th {
+  word-break: break-word;
+}
 
   ul {
     padding-left:1.2rem;
