@@ -6,7 +6,7 @@
 <title>André Ferreira Santos – Data Scientist | Biomedical Engineer</title>
 <style>
   :root {
-     --primary-color:#0A84FF;
+    --primary-color:#0A84FF;
     --accent-color:#2F2F2F;
     --bg-color:#F9FAFB;
     --section-bg:#FFFFFF;
@@ -15,59 +15,96 @@
     --border-color:#E5E7EB;
     --chip-bg:#EAF3FF;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{
+
+  * {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+
+  body {
     font-family:"Inter","Segoe UI",Roboto,Arial,sans-serif;
     background:var(--bg-color);
     color:var(--text-color);
     line-height:1.6;
     font-size:16px;
+    /* ✅ add a print-safe color mode */
+    -webkit-print-color-adjust:exact;
+    color-adjust:exact;
   }
-  header{
+
+  header {
     background:var(--section-bg);
     border-bottom:1px solid var(--border-color);
     text-align:center;
     padding:2rem 1rem 1.5rem;
   }
-  header h1{font-size:2rem;color:var(--accent-color);margin-bottom:.3rem;}
-  header p.title{font-weight:500;color:var(--primary-color);}
-  .contact{
+
+  header h1 {
+    font-size:2rem;
+    color:var(--accent-color);
+    margin-bottom:.3rem;
+  }
+
+  header p.title {
+    font-weight:500;
+    color:var(--primary-color);
+  }
+
+  .contact {
     margin-top:.6rem;
     font-size:.9rem;
     color:var(--muted-color);
   }
-  .container{max-width:900px;margin:0 auto;padding:1.5rem;}
-  section{
+
+  .container {
+    max-width:900px;
+    margin:0 auto;
+    padding:1.5rem;
+  }
+
+  section {
     background:var(--section-bg);
     border:1px solid var(--border-color);
     border-radius:8px;
     padding:1.25rem 1.5rem;
     margin-bottom:1.2rem;
-    overflow:hidden;          /* keep content inside rounded corners */
-    word-wrap:break-word;     /* wrap long words */
-    overflow-wrap:break-word; /* newer equivalent */
+    overflow:hidden;          /* keeps content inside rounded corners */
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+    /* ✅ optional: box-shadow for subtle depth */
+    box-shadow:0 1px 2px rgba(0,0,0,0.03);
   }
-  h2{
+
+  h2 {
     color:var(--primary-color);
     border-bottom:2px solid var(--border-color);
     padding-bottom:.3rem;
     margin-bottom:.8rem;
     font-size:1.25rem;
   }
+
   p, ul, td, th {
     word-wrap:break-word;
     overflow-wrap:break-word;
   }
-  ul{padding-left:1.2rem;margin-top:.4rem;}
-  ul li{margin-bottom:.4rem;}
 
-/* Chips (skill tags) */
+  ul {
+    padding-left:1.2rem;
+    margin-top:.4rem;
+  }
+  ul li {
+    margin-bottom:.4rem;
+  }
+
+  /* === Skill Chips === */
   .chip-container {
     display:flex;
     flex-wrap:wrap;
     gap:.5rem;
     margin-top:.25rem;
   }
+
   .chip {
     background:var(--chip-bg);
     color:var(--accent-color);
@@ -76,33 +113,92 @@
     font-size:.9rem;
     border:1px solid var(--border-color);
     white-space:nowrap;
+    /* ✅ better cross‑browser alignment for multiple lines */
+    display:inline-flex;
+    align-items:center;
   }
 
-  table{
+  table {
     width:100%;
     border-collapse:collapse;
     margin-top:.3rem;
     table-layout:fixed; /* ensures wrapping inside cells */
   }
-  th,td{
+
+  th, td {
     vertical-align:top;
     text-align:left;
     padding:.3rem .6rem;
     border:none;
-    word-break:break-word; /* key to prevent overflow */
+    word-break:break-word;
   }
-  th{
+
+  th {
     width:30%;
     color:var(--primary-color);
+    font-weight:600; /* ✅ clearer emphasis */
   }
-  /* Make sure “·” separators wrap nicely */
-  td{
+
+  td {
     white-space:normal;
   }
-  .muted{color:var(--muted-color);}
-  @media (max-width:700px){
-    .container{padding:1rem;}
-    table th{width:40%;}
+
+  .muted { color:var(--muted-color); }
+
+  @media (max-width:700px) {
+    .container { padding:1rem; }
+    table th { width:40%; }
+  }
+
+  /* === Enhanced layout for Experience section === */
+  .role {
+    margin-bottom:1.8rem;
+    padding-bottom:1.2rem;
+    border-bottom:1px solid var(--border-color);
+  }
+  .role:last-child {
+    border-bottom:none;
+    padding-bottom:0;
+  }
+  .role b {
+    font-size:1rem;
+    color:var(--accent-color);
+  }
+  .role .muted {
+    display:block;
+    margin-bottom:0.4rem;
+    color:var(--muted-color);
+    font-size:0.9rem;
+  }
+  .role ul {
+    margin-top:0.4rem;
+  }
+  .role ul li {
+    margin-bottom:0.35rem;
+  }
+
+  /* ✅ optional: smooth printed font rendering */
+  @media screen and (max-width:700px) {
+    .role b { font-size:0.98rem; }
+    .role .muted { font-size:0.88rem; }
+  }
+
+  /* ✅ optional: add print styling */
+  @media print {
+    body {
+      background:#fff;
+      color:#000;
+      font-size:12pt;
+      line-height:1.5;
+    }
+    a::after {
+      content:" (" attr(href) ")";
+      font-size:0.8em;
+    }
+    section {
+      box-shadow:none;
+      border-color:#ddd;
+    }
   }
 </style>
 </head>
@@ -190,58 +286,67 @@
 <section>
   <h2>Professional Experience</h2>
 
-   <b>PhD Researcher — University of Coimbra · CIBIT & ICNAS</b><br>
-  <span class="muted">2019 – Present | Biomedical Engineering · Neurogenomics · Graph Data Science</span>
-  <ul>
-    <li>Applied <b>graph analytics</b> and <b>machine learning</b> to uncover dopaminergic and serotonergic mechanisms differentiating <b>Autism Spectrum Disorder (ASD)</b> and <b>Developmental Delay (DD)</b>.</li>
-    <li>Designed and maintained <b>relational (MySQL)</b> and <b>graph (Neo4j)</b> databases integrating genomic CNV data, clinical phenotypes, and ontology terms (GO).</li>
-    <li>Developed ETL pipelines (Python · R · Ruby) for data normalization, annotation (Ensembl Biomart), and integration of >68 000 patient‑CNV relations.</li>
-    <li>Performed <b>complex network analysis</b> (hub detection, modularity, centrality metrics) and trained <b>Random Forest classifiers</b> achieving >85% accuracy in differential diagnosis tasks.</li>
-    <li>Implemented <b>graph‑native ML pipelines</b> (node2vec embeddings, Neo4j GDS) to classify participants via genetic and functional similarity networks.</li>
-    <li>Published peer‑reviewed work in the <i><a href="https://doi.org/10.3390/jpm12101579">Journal of Personalized Medicine (2022)</a></i> journal.</li>
-    <li>Released datasets and code as open science resources → <a href="https://doi.org/10.7910/DVN/HO1JLJ">Dataverse Repository</a>.</li>
-  </ul>
+  <!-- === 1. PhD Researcher === -->
+  <div class="role">
+    <b>PhD Researcher — University of Coimbra · CIBIT & ICNAS</b><br>
+    <span class="muted">2019 – Present | Biomedical Engineering · Neurogenomics · Graph Data Science</span>
+    <ul>
+      <li>Applied <b>graph analytics</b> and <b>machine learning</b> to uncover dopaminergic and serotonergic mechanisms differentiating <b>Autism Spectrum Disorder (ASD)</b> and <b>Developmental Delay (DD)</b>.</li>
+      <li>Designed and maintained <b>relational (MySQL)</b> and <b>graph (Neo4j)</b> databases integrating genomic CNV data, clinical phenotypes, and ontology terms (GO).</li>
+      <li>Developed ETL pipelines (Python · R · Ruby) for data normalization, annotation (Ensembl Biomart), and integration of >68 000 patient‑CNV relations.</li>
+      <li>Performed <b>complex network analysis</b> (hub detection, modularity, centrality metrics) and trained <b>Random Forest classifiers</b> achieving >85% accuracy in differential diagnosis tasks.</li>
+      <li>Implemented <b>graph‑native ML pipelines</b> (node2vec embeddings, Neo4j GDS) to classify participants via genetic and functional similarity networks.</li>
+      <li>Published peer‑reviewed work in the <i><a href="https://doi.org/10.3390/jpm12101579">Journal of Personalized Medicine (2022)</a></i>.</li>
+      <li>Released datasets and code as open‑science resources → <a href="https://doi.org/10.7910/DVN/HO1JLJ">Dataverse Repository</a>.</li>
+    </ul>
+  </div>
 
-<b>Health Informatics Specialist — Centro Hospitalar Universitário de Coimbra (CHUC)</b><br>
-  <span class="muted">Clinical Informatics Department · 2017 – 2024 | Digital Health & Interoperability Engineering</span>
-  <ul>
-    <li>Led the <b>design and deployment of a structured clinical documentation system</b> at CHUC’s Pediatric Neurodevelopment and Autism Unit (UNDA), integrating <b>HL7 CDA</b> and <b>SNOMED‑CT</b> for <b>semantic and structural interoperability</b>.</li>
-    <li>Developed a <b>three‑layer architecture</b> (data access · logic · UI) connected to national EHR systems (<i>SClínico</i> and SONHO V2) via <b>HL7 messaging and REST services</b>.</li>
-    <li>Created a <b>web‑based ASP.NET MVC application</b> enabling clinicians to define <b>reusable templates</b> for structured consultations and assessments (e.g., Griffiths Mental Developmental Scale).</li>
-    <li>Implemented <b>SNOMED‑CT terminology server integration</b> for real‑time concept lookup and validation, ensuring high‑quality coded data.</li>
-    <li>Engineered <b>HL7 v2 interoperability modules</b> (via LIGHt gateway) to exchange structured data with the Portuguese National EHR (SNS), minimizing duplication and enhancing workflow efficiency.</li>
-    <li>Validated and adopted in clinical practice with <small>multidisciplinary teams of psychologists, pediatricians, and data scientists</small>, supporting a potential user base of 65 000+ healthcare professionals nationwide.</li>
-    <li>Delivered improvements in <b>data quality, semantic consistency, and research integration</b>, enabling longitudinal analysis and population queries.</li>
-    <li>Published peer‑reviewed work in the <i><a href="https://doi.org/10.3390/healthcare11070973">Healthcare (2023)</a></i> journal.</li>
-  </ul>
+  <!-- === 2. Health Informatics Specialist === -->
+  <div class="role">
+    <b>Health Informatics Specialist — Centro Hospitalar Universitário de Coimbra (CHUC)</b><br>
+    <span class="muted">2017 – 2024 | Clinical Informatics Department · Digital Health & Interoperability Engineering</span>
+    <ul>
+      <li>Led the <b>design and deployment of a structured clinical documentation system</b> at CHUC’s Pediatric Neurodevelopment and Autism Unit (UNDA), integrating <b>HL7 CDA</b> and <b>SNOMED‑CT</b> for semantic and structural interoperability.</li>
+      <li>Developed a <b>three‑layer architecture</b> (data access · logic · UI) connected to national EHR systems (<i>SClínico</i> and SONHO V2) via <b>HL7 messaging and REST services</b>.</li>
+      <li>Created a <b>web‑based ASP.NET MVC application</b> allowing clinicians to define <b>reusable templates</b> for structured assessments (e.g., Griffiths Mental Developmental Scale).</li>
+      <li>Implemented <b>SNOMED‑CT terminology server integration</b> for real‑time concept lookup and validation, ensuring high‑quality coded data.</li>
+      <li>Engineered <b>HL7 v2 interoperability modules</b> (via LIGHt gateway) to exchange structured data with the Portuguese National EHR (SNS), enhancing workflow efficiency.</li>
+      <li>Validated and adopted in clinical practice with <small>multidisciplinary teams of psychologists, pediatricians, and data scientists</small>, impacting a potential user base of 65 000+ healthcare professionals nationwide.</li>
+      <li>Delivered measurable improvements in <b>data quality, semantic consistency, and research integration</b>, enabling longitudinal analysis and population queries.</li>
+      <li>Published peer‑reviewed work in the <i><a href="https://doi.org/10.3390/healthcare11070973">Healthcare (2023)</a></i> journal.</li>
+    </ul>
+  </div>
 
-  <b>Research Fellow — CIMAGO (Biomedical Research Unit, University of Coimbra)</b><br>
-<span class="muted">2015 – 2016 | Genomic Data Science & Machine Learning</span>
-  <ul>
-    <li>Collaborated with the Cytogenetics and Genomics Laboratory (CIMAGO) on projects combining <b>genomic, epigenetic and clinical data</b> in cancer and neurogenetic research.</li>
-    <li>Developed a <b>LAMP‑based genetic data integration platform</b> (PHP/JavaScript/MySQL) for uploading, parsing and querying <b>Array‑CGH CNV datasets</b> through a secure web portal with gene and chromosome‑level visualization.</li>
-    <li>Enabled clinicians to standardize and trace patient CNV records, replacing manual spreadsheets with a centralized <b>MySQL relational repository</b> linking to UCSC Genome Browser and GeneCards.</li>
-    <li>Built and tested <b>machine‑learning workflows</b> in <b>R/Python/Ruby</b> for feature selection and classification of <b>oral squamous cell carcinoma (OSCC)</b> samples using copy‑number and expression data.</li>
-    <li>Discovered genomic patterns and candidate biomarkers through <b>Random Forest and clustering models</b>, strengthening data reproducibility and scientific traceability.</li>
-    <li>Contributed to peer‑reviewed publications including Ribeiro et al. (2017) <b>Molecular Cytogenetics</b> and Ribeiro et al. (2016) <b>Eur J Hum Genet</b> (Q1 IF 4.58).</li>
-  </ul>
+  <!-- === 3. CIMAGO Research Fellow === -->
+  <div class="role">
+    <b>Research Fellow — CIMAGO (Biomedical Research Unit, University of Coimbra)</b><br>
+    <span class="muted">2015 – 2016 | Genomic Data Science · Machine Learning · Bioinformatics</span>
+    <ul>
+      <li>Collaborated with the Cytogenetics and Genomics Laboratory on cross‑disciplinary projects integrating <b>genomic, epigenetic and clinical data</b> for cancer and neurogenetic research.</li>
+      <li>Developed a <b>LAMP‑based genetic data integration portal</b> to upload and parse <b>Array‑CGH CNV data</b>, standardizing patient records through a secure web interface with gene and chromosome‑level visualization.</li>
+      <li>Replaced manual spreadsheet workflows with a <kbd>MySQL</kbd> relational repository linked to <b>UCSC Genome Browser</b> and <b>GeneCards</b>, improving traceability and re‑use of clinical data.</li>
+      <li>Implemented <b>R / Python / Ruby pipelines</b> for feature selection and classification of <b>oral squamous cell carcinoma (OSCC)</b> samples using Random Forest and clustering models.</li>
+      <li>Identified genomic patterns and candidate biomarkers, enhancing <b>reproducibility and scientific transparency</b>.</li>
+      <li>Co‑authored peer‑reviewed articles including Ribeiro et al. (2017) <i>Molecular Cytogenetics</i> and Ribeiro et al. (2016) <i>Eur J Hum Genet</i> (Q1 IF 4.58).</li>
+    </ul>
+  </div>
 
- <b>Researcher / Developer — HNotes (Semantic Health Data Capture Platform)</b><br>
-<span class="muted">Independent Exploration · 2023 – Present | Semantic Modeling & Web Engineering</span>
-<ul>
-  <li>Designed and developed <b>HNotes</b>—a <b>web‑based proof of concept</b> for structured and semantically interoperable clinical documentation.</li>
-  <li>Implemented in <b>Elixir / Phoenix LiveView</b> with <b>Ecto</b> for data persistence, modeling health records through <b>SNOMED CT</b> terminology.</li>
-  <li>Defined a <b>six‑field semantic schema</b> (Component, Property, Time, System, Scale, Method) ensuring unambiguous encoding of every clinical observation.</li>
-  <li>Created dynamic <b>real‑time interfaces</b> for data entry and hierarchical organization (<i>notebooks → notes → registries</i>).</li>
-  <li>Demonstrated interoperability using <b>cardiovascular data</b> (blood‑pressure records) with SNOMED‑compliant attributes.</li>
-  <li>Showcased integration of <b>semantic interoperability</b>, <b>functional programming</b>, and <b>interactive web technologies</b> for health‑data capture.</li>
-  <li>Explore the live demo: 
-    <a href="https://youtu.be/D4lbiLlnmoc" target="_blank" rel="noopener noreferrer">
-      <b>HNotes prototype ▶️</b>
-    </a>
-  </li>
-</ul>
+  <!-- === 4. HNotes Researcher / Developer === -->
+  <div class="role">
+    <b>Researcher / Developer — HNotes (Semantic Health Data Capture Platform)</b><br>
+    <span class="muted">2023 | Independent Exploration · Semantic Modeling & Web Engineering</span>
+    <ul>
+      <li>Designed and developed <b>HNotes</b> — a <b>web‑based proof of concept</b> for structured and semantically interoperable clinical documentation.</li>
+      <li>Implemented in <b>Elixir / Phoenix LiveView</b> with <b>Ecto</b> for data persistence, modeling records through <b>SNOMED CT</b> terminology.</li>
+      <li>Defined a <b>six‑field semantic schema</b> (Component, Property, Time, System, Scale, Method) ensuring unambiguous encoding of every clinical observation.</li>
+      <li>Created dynamic <b>real‑time interfaces</b> for data entry and hierarchical organization (<i>notebooks → notes → registries</i>).</li>
+      <li>Demonstrated interoperability using <b>cardiovascular data</b> (blood‑pressure records) with SNOMED‑compliant attributes.</li>
+      <li>Showcased integration of <b>semantic interoperability</b>, <b>functional programming</b>, and <b>interactive web technologies</b>.</li>
+      <li>Explore the live demo: <a href="https://youtu.be/D4lbiLlnmoc" target="_blank" rel="noopener noreferrer"><b>HNotes prototype ▶️</b></a></li>
+    </ul>
+  </div>
 </section>
+
 
 <section>
   <h2>Education</h2>
